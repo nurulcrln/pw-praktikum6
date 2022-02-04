@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel="stylesheet" href="style.css">
+    <title>PT Once Sejahtera</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Selamat Datang!</h1>
+            <h3>Tagihan Listrik PT Once Sejahtera</h3>
+            <form >
+                <input type="text" id="name" name="name" placeholder="Nama Lengkap" class="input"><br>
+                <select class="kategori" name="kategori" id="kategori">
+                    <option disabled="disabled" selected="selected">Kategori</option>                        
+                    <option value="sosial">Sosial</option>
+                    <option value="rumah">Rumah</option>
+                    <option value="apartemen">Apartemen</option>
+                    <option value="industri">Industri</option>
+                    <option value="villa">Villa</option>
+                </select>
+                <input type="number" name="jumlah" id="jumlah" placeholder="Jumlah Pemakaian" class="input"><br>
+                </form>
+                <button class="btn" onclick="hitungTagihan()">Submit</button>
+            </div>
+        <div class="right">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th width="15%">Jumlah</th>
+                            <th width="20%">Tarif per-KWH</th>
+                            <th width="20%">Abodemen</th>
+                            <th width="15%">Subtotal</th>
+                        </tr>
+                        </thead>
+                        <tbody id="content">
+                    
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            <h4 id="subtotal"></h4>
+            <h4 id="pajak"></h4>
+            <h4 id="bayar"></h4>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
